@@ -5,7 +5,7 @@
 	padding: 0;
 	box-sizing: border-box;
 	appearance: none;
-	transition: background-color 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+	transition: background-color 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease, opacity 0.2s ease;
 	scroll-behavior: smooth;
 }
 
@@ -457,6 +457,7 @@ p code, h1 code, h2 code, h3 code, h4 code, h5 code, h6 code {
 .right-side-nav a {
 	border-left: 7.5px solid transparent;
 	padding: 7.5px;
+	border-radius: 0;
 }
 
 .right-side-nav a:hover {
