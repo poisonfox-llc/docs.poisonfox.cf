@@ -67,6 +67,10 @@ a[href]:hover {
 	text-decoration: underline;
 }
 
+input::-webkit-search-cancel-button {
+	display: none;
+}
+
 span#gsharp-g {
 	font-weight: normal;
 	color: inherit;
