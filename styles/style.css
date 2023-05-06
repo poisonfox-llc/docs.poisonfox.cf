@@ -313,6 +313,7 @@ header ul li button:hover {
 header ul li button:focus, header ul li button:focus-within {
 	background: #b1b1b1;
 	outline: none;
+	box-shadow: 0 0 12px 3px #ea433580;
 }
 
 header ul li button svg * {
@@ -332,6 +333,10 @@ header ul li button svg rect {
 	stroke-width: 2;
 	font-family: "police-sans", sans-serif;
 	font-weight: 900;
+}
+
+.help-btn a {
+	padding: 0;
 }
 
 .help-btn a:focus {
