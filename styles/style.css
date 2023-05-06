@@ -59,6 +59,8 @@ body {
 a[href], a[href]:visited {
 	color: #0000f1;
 	text-decoration: none;
+	border-radius: 4px;
+	padding: 0px 2px;
 }
 
 a[href]:hover {
@@ -305,7 +307,6 @@ header ul li button:hover {
 
 header ul li button:focus, header ul li button:focus-within {
 	background: #b1b1b1;
-	box-shadow: 0 0 12px 3px #ea433580;
 	outline: none;
 }
 
@@ -500,6 +501,10 @@ header.dark input, header.dark button {
 	background: #666;
 	color: #f1f1f1;
 	border-color: #f1f1f1;
+}
+
+header.dark input::placeholder {
+	color: #f1f1f180;
 }
 
 header.dark button:hover {
