@@ -5,8 +5,8 @@
 	padding: 0;
 	box-sizing: border-box;
 	appearance: none;
-	transition: all 0.2s ease;
-	scrollbar-gutter: stable both-edges;
+	transition: background-color 0.2s ease;
+	transition: border-color 0.2s ease;
 	scroll-behavior: smooth;
 }
 
