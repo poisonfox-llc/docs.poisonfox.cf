@@ -72,7 +72,7 @@ const searchQuery = (q) => {
 		tableDiv.appendChild(elem);
 	}
 	
-	if(query === "*" || query === "all") {
+	if(query.toLowerCase() == "*" || query.toLowerCase() === "all") {
 		newResults.splice(0, newResults.length);
 		
 		for(let i = 0; i < results.length; i++) {
