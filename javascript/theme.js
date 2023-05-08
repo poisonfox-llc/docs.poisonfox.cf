@@ -28,7 +28,7 @@ themeBtn.addEventListener("touch", () => {
 });
 
 window.addEventListener("keydown", (e) => {
-	if(e.keyCode == 84 && e.shiftKey == true && e.altKey == true) {
+	if(e.keyCode == 84 && e.ctrlKey == true && e.altKey == true) {
 		body.classList.toggle("dark");
 		leftSideNav.classList.toggle("dark");
 		header.classList.toggle("dark");
