@@ -42,13 +42,20 @@ window.addEventListener("keydown", (e) => {
 });
 
 window.matchMedia('(prefers-color-scheme: dark)').addEventListener("change", (e) => {
-	console.log(e);
-	
-	const isDarkTheme = true;
+	const isDarkTheme = e.isTrusted;
 		
 	const expirationDate = new Date();
 	expirationDate.setTime(expirationDate.getTime() + (30 * 24 * 60 * 60 * 1000));
 	document.cookie = `darkTheme=${isDarkTheme};expires=${expirationDate.toUTCString()};path=/`;
+	if (isDarkTheme) {
+		body.classList.add("dark");
+		leftSideNav.classList.add("dark");
+		header.classList.add("dark");
+	} else {
+		body.classList.remove("dark");
+		leftSideNav.classList.remove("dark");
+		header.classList.remove("dark");
+	}
 });
 
 const darkThemeCookie = document.cookie.split(";").find(cookie => cookie.trim().startsWith("darkTheme="));
