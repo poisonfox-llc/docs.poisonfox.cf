@@ -221,6 +221,7 @@ pre {
 .code #line-count {
 	display: inline-block;
 	width: 0;
+	height: 1em;
 }
 
 .code #line-count::before {
