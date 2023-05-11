@@ -84,7 +84,7 @@ const searchQuery = (q) => {
 		for(let i = 0; i < newResults.length; i++) {
 			const elem = document.createElement("div");
 			elem.innerHTML = `<h3 id="${newResults[i].name.toLowerCase()}">${newResults[i].name}</h3>
-			<a href="https://docs.poisonfox.cf/gsharp/${newResults[i].url}">https://docs.poisonfox.cf/gsharp/${newResults[i].url}</a>
+			<a href="./${newResults[i].url}">https://docs.poisonfox.cf/gsharp/${newResults[i].url}</a>
 			<p>${newResults[i].description}</p>`;
 			elem.classList.add("results");
 			elem.classList.add(`r-${i + 1}`);
