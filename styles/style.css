@@ -1,6 +1,6 @@
 @import url("./police-sans.css");
 
-*, ::before, ::after {
+*, ::before, ::after, ::-webkit-scrollbar, ::-webkit-scrollbar-thumb, ::-webkit-scrollbar-corner {
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
