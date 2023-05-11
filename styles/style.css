@@ -5,7 +5,7 @@
 	padding: 0;
 	box-sizing: border-box;
 	appearance: none;
-	transition: background-color 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease, opacity 0.2s ease;
+	transition: background 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease, opacity 0.2s ease;
 	overscroll-behavior: none;
 	scroll-behavior: smooth;
 }
