@@ -58,6 +58,24 @@ window.matchMedia('(prefers-color-scheme: dark)').addEventListener("change", (e)
 	}
 });
 
+window.addEventListener("load", (e) => {
+	const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
+	const isDarkTheme = mediaQuery.matches;
+		
+	const expirationDate = new Date();
+	expirationDate.setTime(expirationDate.getTime() + (30 * 24 * 60 * 60 * 1000));
+	document.cookie = `darkTheme=${isDarkTheme};expires=${expirationDate.toUTCString()};path=/`;
+	if (isDarkTheme) {
+		body.classList.add("dark");
+		leftSideNav.classList.add("dark");
+		header.classList.add("dark");
+	} else {
+		body.classList.remove("dark");
+		leftSideNav.classList.remove("dark");
+		header.classList.remove("dark");
+	}
+});
+
 const darkThemeCookie = document.cookie.split(";").find(cookie => cookie.trim().startsWith("darkTheme="));
 
 if (darkThemeCookie) {
