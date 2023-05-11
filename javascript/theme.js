@@ -42,7 +42,7 @@ window.addEventListener("keydown", (e) => {
 });
 
 window.matchMedia('(prefers-color-scheme: dark)').addEventListener("change", (e) => {
-	const isDarkTheme = e.isTrusted;
+	const isDarkTheme = e.matches;
 		
 	const expirationDate = new Date();
 	expirationDate.setTime(expirationDate.getTime() + (30 * 24 * 60 * 60 * 1000));
