@@ -64,24 +64,24 @@ body {
 }
 
 ::-webkit-scrollbar-thumb {
-	border: 2px solid #0000;
-	background: #333;
+	border: 6px solid #0000;
+	background: #787878;
 	background-clip: padding-box;
-	border-radius: 6px;
+	border-radius: 10px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-	border: 2px solid #0000;
-	background: #353535;
+	border: 6px solid #0000;
+	background: #888;
 	background-clip: padding-box;
-	border-radius: 6px;
+	border-radius: 10px;
 }
 
 ::-webkit-scrollbar-thumb:active {
-	border: 2px solid #0000;
-	background: #444;
+	border: 6px solid #0000;
+	background: #999;
 	background-clip: padding-box;
-	border-radius: 6px;
+	border-radius: 10px;
 }
 
 ::selection {
