@@ -52,6 +52,38 @@ body {
 	overflow-x: hidden;
 }
 
+body::scrollbar {
+	background: #0000;
+	width: 16px;
+	height: 16px;
+}
+
+
+body::scrollbar-corner {
+	background: #0000;
+}
+
+body::scrollbar-thumb {
+	border: 2px solid #0000;
+	background: #333;
+	background-clip: padding-box;
+	border-radius: 6px;
+}
+
+body::scrollbar-thumb:hover {
+	border: 2px solid #0000;
+	background: #353535;
+	background-clip: padding-box;
+	border-radius: 6px;
+}
+
+body::scrollbar-thumb:active {
+	border: 2px solid #0000;
+	background: #444;
+	background-clip: padding-box;
+	border-radius: 6px;
+}
+
 ::selection {
 	background: #ea4335;
 	color: #f1f1f1;
