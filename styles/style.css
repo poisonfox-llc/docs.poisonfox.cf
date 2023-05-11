@@ -52,32 +52,32 @@ body {
 	overflow-x: hidden;
 }
 
-body::scrollbar {
+::-webkit-scrollbar {
 	background: #0000;
 	width: 16px;
 	height: 16px;
 }
 
 
-body::scrollbar-corner {
+::-webkit-scrollbar-corner {
 	background: #0000;
 }
 
-body::scrollbar-thumb {
+::-webkit-scrollbar-thumb {
 	border: 2px solid #0000;
 	background: #333;
 	background-clip: padding-box;
 	border-radius: 6px;
 }
 
-body::scrollbar-thumb:hover {
+::-webkit-scrollbar-thumb:hover {
 	border: 2px solid #0000;
 	background: #353535;
 	background-clip: padding-box;
 	border-radius: 6px;
 }
 
-body::scrollbar-thumb:active {
+::-webkit-scrollbar-thumb:active {
 	border: 2px solid #0000;
 	background: #444;
 	background-clip: padding-box;
