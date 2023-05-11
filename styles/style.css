@@ -89,7 +89,7 @@ body {
 }
 
 body::-webkit-scrollbar {
-	background: linear-gradient(to bottom, #fff 62px, #ebebeb 62px, #555 64px, #fff 64px);
+	background: linear-gradient(to bottom, #fff 62px, #ebebeb 62px, #ebebeb 64px, #fff 64px);
 }
 
 a[href], a[href]:visited {
