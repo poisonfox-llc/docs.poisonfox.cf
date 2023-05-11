@@ -58,7 +58,6 @@ body {
 	height: 16px;
 }
 
-
 ::-webkit-scrollbar-corner {
 	background: #0000;
 }
@@ -87,6 +86,10 @@ body {
 ::selection {
 	background: #ea4335;
 	color: #f1f1f1;
+}
+
+body::-webkit-scrollbar {
+	background: linear-gradient(to bottom, #fff 62px, #ebebeb 62px, #555 64px, #fff 64px);
 }
 
 a[href], a[href]:visited {
@@ -527,6 +530,10 @@ body.dark {
 	color: #f1f1f1;
 }
 
+body.dark::-webkit-scrollbar {
+	background: linear-gradient(to bottom, #444 62px, #555 62px, #555 64px, #444 64px);
+}
+
 body.dark a[href] {
 	color: #b6cffc;
 }
@@ -603,6 +610,15 @@ body.dark .right-side-nav a:focus, body.dark .right-side-nav a.active {
 		width: 100%;
 		left: 0;
 	}
+	
+	body::-webkit-scrollbar {
+		background: linear-gradient(to bottom, #fff 62px, #ebebeb 62px, #ebebeb 64px, #fff 64px);
+	}
+	
+	body.dark::-webkit-scrollbar {
+		background: linear-gradient(to bottom, #444 62px, #555 62px, #555 64px, #333 64px);
+	}
+}
 
 @media screen and (max-width: 560px) {
 	.container {
