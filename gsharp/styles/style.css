@@ -128,11 +128,6 @@ a.event:hover {
 	text-decoration: none;
 }
 
-a.event:active {
-	background: #ba4f4590;
-	text-decoration: none;
-}
-
 a[href] span#gsharp-g {
 	cursor: inherit;
 }
