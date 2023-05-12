@@ -115,20 +115,20 @@ span#gsharp-g {
 	cursor: text;
 }
 
-.event {
+a.event {
 	display: block;
 	background: #ba4f45;
-	color: #f1f1f1;
+	color: #f1f1f1 !important;
 	text-decoration: none;
 	padding: 15px;
 }
 
-.event:hover {
+a.event:hover {
 	background: #ba4f45b0;
 	text-decoration: none;
 }
 
-.event:active {
+a.event:active {
 	background: #ba4f4590;
 	text-decoration: none;
 }
