@@ -118,18 +118,18 @@ span#gsharp-g {
 .event {
 	background: #ba4f45;
 	color: #f1f1f1;
-	text-decoration: none;
+	text-decoration: none !important;
 	padding: 15px;
 }
 
 .event:hover {
 	background: #ba4f45b0;
-	text-decoration: none;
+	text-decoration: none !important;
 }
 
 .event:active {
-	background: #ba4f45c0;
-	text-decoration: none;
+	background: #ba4f4590;
+	text-decoration: none !important;
 }
 
 a[href] span#gsharp-g {
