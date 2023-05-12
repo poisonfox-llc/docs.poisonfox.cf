@@ -122,6 +122,16 @@ span#gsharp-g {
 	padding: 15px;
 }
 
+.event:hover {
+	background: #ba4f45b0;
+	text-decoration: none;
+}
+
+.event:active {
+	background: #ba4f45c0;
+	text-decoration: none;
+}
+
 a[href] span#gsharp-g {
 	cursor: inherit;
 }
