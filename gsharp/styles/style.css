@@ -116,8 +116,10 @@ span#gsharp-g {
 }
 
 .event {
-	background: #ea4335;
+	background: #ea433580;
 	color: #f1f1f1;
+	text-decoration: none;
+	padding: 15px;
 }
 
 a[href] span#gsharp-g {
