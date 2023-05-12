@@ -115,6 +115,11 @@ span#gsharp-g {
 	cursor: text;
 }
 
+.event {
+	background: #ea4335;
+	color: #f1f1f1;
+}
+
 a[href] span#gsharp-g {
 	cursor: inherit;
 }
