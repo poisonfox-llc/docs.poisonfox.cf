@@ -103,6 +103,16 @@ a[href]:hover {
 	text-decoration: underline;
 }
 
+a.download-link {
+	padding: 5px;
+	background: #b1b1b1;
+	border-radius: 5px;
+}
+
+a.download-link[href] {
+	background: #ea4335;
+}
+
 input::-webkit-search-cancel-button {
 	display: none;
 }
