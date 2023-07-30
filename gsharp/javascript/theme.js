@@ -7,7 +7,7 @@ let darkThemeCookie = document.cookie.split(";").find(cookie => cookie.trim().st
 
 browser.cookies.onChanged.addListener((e) => {
 	console.log(e.cookie);
-}
+});
 									  
 themeBtn.addEventListener("click", () => {
 	body.classList.toggle("dark");
