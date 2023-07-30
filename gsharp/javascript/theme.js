@@ -5,7 +5,7 @@ const themeBtn = document.querySelector(".theme-btn");
 
 let darkThemeCookie = document.cookie.split(";").find(cookie => cookie.trim().startsWith("darkTheme=")).split("=")[1];
 
-document.cookies.onChanged.addListener((e) => {
+document.cookie.addEventListener("change", (e) => {
 	console.log(e.cookie);
 });
 									  
