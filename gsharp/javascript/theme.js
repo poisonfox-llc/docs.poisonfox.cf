@@ -3,6 +3,12 @@ const leftSideNav = document.querySelector(".left-side-nav");
 const header = document.querySelector("header");
 const themeBtn = document.querySelector(".theme-btn");
 
+let darkThemeCookie = document.cookie.split(";").find(cookie => cookie.trim().startsWith("darkTheme=")).split("=")[1];
+
+browser.cookies.onChanged.addListener((e) => {
+	console.log(e.cookie);
+}
+									  
 themeBtn.addEventListener("click", () => {
 	body.classList.toggle("dark");
 	leftSideNav.classList.toggle("dark");
@@ -43,8 +49,7 @@ window.addEventListener("keydown", (e) => {
 
 window.matchMedia('(prefers-color-scheme: dark)').addEventListener("change", (e) => {
 	const isDarkTheme = e.matches;
-	const darkThemeCookie = document.cookie.split(";").find(cookie => cookie.trim().startsWith("darkTheme=")).split("=")[1];
-
+	
 	if (isDarkTheme && typeof(darkThemeCookie) != "boolean") {
 		body.classList.add("dark");
 		leftSideNav.classList.add("dark");
@@ -63,8 +68,7 @@ window.matchMedia('(prefers-color-scheme: dark)').addEventListener("change", (e)
 window.addEventListener("load", (e) => {
 	const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
 	const isDarkTheme = mediaQuery.matches;
-	const darkThemeCookie = document.cookie.split(";").find(cookie => cookie.trim().startsWith("darkTheme=")).split("=")[1];
-
+	
 	if (isDarkTheme && typeof(darkThemeCookie) != "boolean") {
 		body.classList.add("dark");
 		leftSideNav.classList.add("dark");
@@ -79,8 +83,6 @@ window.addEventListener("load", (e) => {
 		header.classList.remove("dark");
 	}
 });
-
-const darkThemeCookie = document.cookie.split(";").find(cookie => cookie.trim().startsWith("darkTheme=")).split("=")[1];
 
 if (darkThemeCookie) {
 	const isDarkTheme = darkThemeCookie.split("=")[1] === "true";
