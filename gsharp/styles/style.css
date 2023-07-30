@@ -105,10 +105,11 @@ a[href]:hover {
 
 a.download-link {
 	padding: 5px;
+	margin: 2.5px;
 	background: #b1b1b1;
 	border-radius: 5px;
 	display: inline-block;
-	color: #f1f1f1;
+	color: #f1f1f1 !important;
 }
 
 a.download-link[href] {
