@@ -102,7 +102,7 @@ window.addEventListener("load", (e) => {
 });
 
 if (darkThemeCookie && darkThemeCookie != null) {
-	const isDarkTheme = darkThemeCookie.split("=")[1] === "true";
+	const isDarkTheme = darkThemeCookie;
 	
 	if (isDarkTheme) {
 		body.classList.add("dark");
