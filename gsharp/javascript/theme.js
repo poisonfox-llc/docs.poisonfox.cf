@@ -3,10 +3,12 @@ const leftSideNav = document.querySelector(".left-side-nav");
 const header = document.querySelector("header");
 const themeBtn = document.querySelector(".theme-btn");
 
+let darkThemeCookie = null;
+
 if (document.cookie.split(";").find(cookie => cookie.trim().startsWith("darkTheme="))) {
-	let darkThemeCookie = (document.cookie.split(";").find(cookie => cookie.trim().startsWith("darkTheme=")).split("=")[1] === "true");
+	darkThemeCookie = (document.cookie.split(";").find(cookie => cookie.trim().startsWith("darkTheme=")).split("=")[1] === "true");
 } else {
-	let darkThemeCookie = null;
+	darkThemeCookie = null;
 }
 
 themeBtn.addEventListener("click", () => {
