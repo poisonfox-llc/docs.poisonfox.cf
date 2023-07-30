@@ -4,10 +4,6 @@ const header = document.querySelector("header");
 const themeBtn = document.querySelector(".theme-btn");
 
 let darkThemeCookie = document.cookie.split(";").find(cookie => cookie.trim().startsWith("darkTheme=")).split("=")[1];
-
-document.cookie.addEventListener("change", (e) => {
-	console.log(e.cookie);
-});
 									  
 themeBtn.addEventListener("click", () => {
 	body.classList.toggle("dark");
@@ -19,6 +15,7 @@ themeBtn.addEventListener("click", () => {
 	const expirationDate = new Date();
 	expirationDate.setTime(expirationDate.getTime() + (30 * 24 * 60 * 60 * 1000));
 	document.cookie = `darkTheme=${isDarkTheme};expires=${expirationDate.toUTCString()};path=/`;
+	darkThemeCookie = document.cookie.split(";").find(cookie => cookie.trim().startsWith("darkTheme=")).split("=")[1];
 });
 
 themeBtn.addEventListener("touch", () => {
@@ -31,6 +28,7 @@ themeBtn.addEventListener("touch", () => {
 	const expirationDate = new Date();
 	expirationDate.setTime(expirationDate.getTime() + (30 * 24 * 60 * 60 * 1000));
 	document.cookie = `darkTheme=${isDarkTheme};expires=${expirationDate.toUTCString()};path=/`;
+	darkThemeCookie = document.cookie.split(";").find(cookie => cookie.trim().startsWith("darkTheme=")).split("=")[1];
 });
 
 window.addEventListener("keydown", (e) => {
@@ -44,6 +42,7 @@ window.addEventListener("keydown", (e) => {
 		const expirationDate = new Date();
 		expirationDate.setTime(expirationDate.getTime() + (30 * 24 * 60 * 60 * 1000));
 		document.cookie = `darkTheme=${isDarkTheme};expires=${expirationDate.toUTCString()};path=/`;
+		darkThemeCookie = document.cookie.split(";").find(cookie => cookie.trim().startsWith("darkTheme=")).split("=")[1];
 	}
 });
 
