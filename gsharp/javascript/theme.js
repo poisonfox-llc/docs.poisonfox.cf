@@ -3,7 +3,7 @@ const leftSideNav = document.querySelector(".left-side-nav");
 const header = document.querySelector("header");
 const themeBtn = document.querySelector(".theme-btn");
 
-let darkThemeCookie = document.cookie.split(";").find(cookie => cookie.trim().startsWith("darkTheme=")).split("=")[1];
+let darkThemeCookie = (document.cookie.split(";").find(cookie => cookie.trim().startsWith("darkTheme=")).split("=")[1] === "true");
 									  
 themeBtn.addEventListener("click", () => {
 	body.classList.toggle("dark");
