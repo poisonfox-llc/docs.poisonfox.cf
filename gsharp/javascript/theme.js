@@ -101,7 +101,7 @@ window.addEventListener("load", (e) => {
 	}
 });
 
-if (darkThemeCookie) {
+if (darkThemeCookie && darkThemeCookie != null) {
 	const isDarkTheme = darkThemeCookie.split("=")[1] === "true";
 	
 	if (isDarkTheme) {
