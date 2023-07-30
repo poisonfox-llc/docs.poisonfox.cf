@@ -19,7 +19,11 @@ themeBtn.addEventListener("click", () => {
 	const expirationDate = new Date();
 	expirationDate.setTime(expirationDate.getTime() + (30 * 24 * 60 * 60 * 1000));
 	document.cookie = `darkTheme=${isDarkTheme};expires=${expirationDate.toUTCString()};path=/`;
-	darkThemeCookie = document.cookie.split(";").find(cookie => cookie.trim().startsWith("darkTheme=")).split("=")[1];
+	if (document.cookie.split(";").find(cookie => cookie.trim().startsWith("darkTheme=")).split("=")[1]) {
+		darkThemeCookie = (document.cookie.split(";").find(cookie => cookie.trim().startsWith("darkTheme=")).split("=")[1] === "true");
+	} else {
+		darkThemeCookie = null;
+	}
 });
 
 themeBtn.addEventListener("touch", () => {
@@ -32,7 +36,11 @@ themeBtn.addEventListener("touch", () => {
 	const expirationDate = new Date();
 	expirationDate.setTime(expirationDate.getTime() + (30 * 24 * 60 * 60 * 1000));
 	document.cookie = `darkTheme=${isDarkTheme};expires=${expirationDate.toUTCString()};path=/`;
-	darkThemeCookie = document.cookie.split(";").find(cookie => cookie.trim().startsWith("darkTheme=")).split("=")[1];
+	if (document.cookie.split(";").find(cookie => cookie.trim().startsWith("darkTheme=")).split("=")[1]) {
+		darkThemeCookie = (document.cookie.split(";").find(cookie => cookie.trim().startsWith("darkTheme=")).split("=")[1] === "true");
+	} else {
+		darkThemeCookie = null;
+	}
 });
 
 window.addEventListener("keydown", (e) => {
@@ -46,7 +54,11 @@ window.addEventListener("keydown", (e) => {
 		const expirationDate = new Date();
 		expirationDate.setTime(expirationDate.getTime() + (30 * 24 * 60 * 60 * 1000));
 		document.cookie = `darkTheme=${isDarkTheme};expires=${expirationDate.toUTCString()};path=/`;
-		darkThemeCookie = document.cookie.split(";").find(cookie => cookie.trim().startsWith("darkTheme=")).split("=")[1];
+		if (document.cookie.split(";").find(cookie => cookie.trim().startsWith("darkTheme=")).split("=")[1]) {
+			darkThemeCookie = (document.cookie.split(";").find(cookie => cookie.trim().startsWith("darkTheme=")).split("=")[1] === "true");
+		} else {
+			darkThemeCookie = null;
+		}
 	}
 });
 
