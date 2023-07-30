@@ -558,6 +558,10 @@ p.results-infos {
 	margin-top: 27.5px;
 }
 
+iframe[src*="youtube.com/embed"] {
+	max-width: 100%;
+}
+
 /* Dark theme */
 
 body.dark {
