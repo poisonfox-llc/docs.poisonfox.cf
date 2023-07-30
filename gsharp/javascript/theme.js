@@ -3,7 +3,7 @@ const leftSideNav = document.querySelector(".left-side-nav");
 const header = document.querySelector("header");
 const themeBtn = document.querySelector(".theme-btn");
 
-if (document.cookie.split(";").find(cookie => cookie.trim().startsWith("darkTheme=")).split("=")[1]) {
+if (document.cookie.split(";").find(cookie => cookie.trim().startsWith("darkTheme="))) {
 	let darkThemeCookie = (document.cookie.split(";").find(cookie => cookie.trim().startsWith("darkTheme=")).split("=")[1] === "true");
 } else {
 	let darkThemeCookie = null;
@@ -19,7 +19,7 @@ themeBtn.addEventListener("click", () => {
 	const expirationDate = new Date();
 	expirationDate.setTime(expirationDate.getTime() + (30 * 24 * 60 * 60 * 1000));
 	document.cookie = `darkTheme=${isDarkTheme};expires=${expirationDate.toUTCString()};path=/`;
-	if (document.cookie.split(";").find(cookie => cookie.trim().startsWith("darkTheme=")).split("=")[1]) {
+	if (document.cookie.split(";").find(cookie => cookie.trim().startsWith("darkTheme="))) {
 		darkThemeCookie = (document.cookie.split(";").find(cookie => cookie.trim().startsWith("darkTheme=")).split("=")[1] === "true");
 	} else {
 		darkThemeCookie = null;
@@ -36,7 +36,7 @@ themeBtn.addEventListener("touch", () => {
 	const expirationDate = new Date();
 	expirationDate.setTime(expirationDate.getTime() + (30 * 24 * 60 * 60 * 1000));
 	document.cookie = `darkTheme=${isDarkTheme};expires=${expirationDate.toUTCString()};path=/`;
-	if (document.cookie.split(";").find(cookie => cookie.trim().startsWith("darkTheme=")).split("=")[1]) {
+	if (document.cookie.split(";").find(cookie => cookie.trim().startsWith("darkTheme="))) {
 		darkThemeCookie = (document.cookie.split(";").find(cookie => cookie.trim().startsWith("darkTheme=")).split("=")[1] === "true");
 	} else {
 		darkThemeCookie = null;
@@ -54,7 +54,7 @@ window.addEventListener("keydown", (e) => {
 		const expirationDate = new Date();
 		expirationDate.setTime(expirationDate.getTime() + (30 * 24 * 60 * 60 * 1000));
 		document.cookie = `darkTheme=${isDarkTheme};expires=${expirationDate.toUTCString()};path=/`;
-		if (document.cookie.split(";").find(cookie => cookie.trim().startsWith("darkTheme=")).split("=")[1]) {
+		if (document.cookie.split(";").find(cookie => cookie.trim().startsWith("darkTheme="))) {
 			darkThemeCookie = (document.cookie.split(";").find(cookie => cookie.trim().startsWith("darkTheme=")).split("=")[1] === "true");
 		} else {
 			darkThemeCookie = null;
