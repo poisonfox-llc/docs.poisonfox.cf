@@ -107,10 +107,16 @@ a.download-link {
 	padding: 5px;
 	background: #b1b1b1;
 	border-radius: 5px;
+	display: inline-block;
+	color: #f1f1f1;
 }
 
 a.download-link[href] {
 	background: #ea4335;
+}
+
+a.download-link[href]:hover {
+	background: #d42616;
 }
 
 input::-webkit-search-cancel-button {
