@@ -1,14 +1,7 @@
 const searchInput = document.querySelector("header ul li form input");
-const formElems = [...searchInput.parentNode.elements];
 
-searchInput.addEventListener("input", () => {
-	formElems.forEach(elem => {
-		if(searchInput.textContent == "") {
-			elem.disable = true;
-		} else {
-			elem.disable = false;
-		}
-	});
+searchInput.addEventListener("invalid", (e) => {
+	e.preventDefault();
 });
 
 window.addEventListener("keydown", (e) => {
