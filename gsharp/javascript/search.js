@@ -51,7 +51,7 @@ const searchQuery = (q) => {
 			tableDiv.innerHTML = "";
 		}
 		
-		const regexp = new RegExp(query.replaceAll("*", "\\"), 'gi');
+		const regexp = new RegExp(query.replaceAll("*", "\\*"), 'gi');
 		const matches = (res.name + res.url + res.description).match(regexp) || [];
 		matchesNum += matches.length;
 	}
