@@ -21,6 +21,7 @@ const results = [
 
 const tableDiv = document.querySelector(".results-table")
 const query = new URLSearchParams(location.search).get("q");
+const escapedQuery = query.replaceAll(/[.*+?^${}()|[\]\\]/g, '\\\\$&');
 const qSpan = document.querySelectorAll(".query");
 const qInput = document.querySelector("header ul li form input");
 const qResInfos = document.querySelector(".results-infos");
@@ -51,19 +52,19 @@ const searchQuery = (q) => {
 			tableDiv.innerHTML = "";
 		}
 		
-		const regexp = new RegExp(query.replaceAll(/[.*+?^${}()|[\]\\]/g, '\\\\$&'), 'gi');
+		const regexp = new RegExp(escapedQuery, 'gi');
 		const matches = (res.name + res.url + res.description).match(regexp) || [];
 		matchesNum += matches.length;
 	}
 	
 	for(let i = 0; i < newResults.length; i++) {
 		const elem = document.createElement("div");
-		newResults[i].description = newResults[i].description.replace(new RegExp('(' + query.replaceAll(/[.*+?^${}()|[\]\\]/g, '\\\\$&') + ')', 'gi'), '<span class="bg-query">$1</span>');
-		newUrl = `${newResults[i].url.replace(new RegExp('(' + query.replaceAll(/[.*+?^${}()|[\]\\]/g, '\\\\$&') + ')', 'gi'), '<span class="bg-query">$1</span>')}`;
+		newResults[i].description = newResults[i].description.replace(new RegExp('(' + escapedQuery + ')', 'gi'), '<span class="bg-query">$1</span>');
+		newUrl = `${newResults[i].url.replace(new RegExp('(' + escapedQuery + ')', 'gi'), '<span class="bg-query">$1</span>')}`;
 		if(newResults[i].url != "") {
 			newUrl = "/" + newUrl;
 		}
-		newResults[i].name = newResults[i].name.replace(new RegExp('(' + query.replaceAll(/[.*+?^${}()|[\]\\]/g, '\\\\$&') + ')', 'gi'), '<span class="bg-query">$1</span>');
+		newResults[i].name = newResults[i].name.replace(new RegExp('(' + escapedQuery + ')', 'gi'), '<span class="bg-query">$1</span>');
 		elem.innerHTML = `<h3 id="${newResults[i].id}">${newResults[i].name}</h3>
 		<a href="https://docs.poisonfox.cf/gsharp/${newResults[i].url}">https://docs.poisonfox.cf/gsharp${newUrl}</a>
 		<p>${newResults[i].description}</p>`;
