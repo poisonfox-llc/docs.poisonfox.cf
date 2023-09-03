@@ -58,12 +58,12 @@ const searchQuery = (q) => {
 	
 	for(let i = 0; i < newResults.length; i++) {
 		const elem = document.createElement("div");
-		newResults[i].description = newResults[i].description.replace(new RegExp('(' + query + ')', 'gi'), '<span class="bg-query">$1</span>');
-		newUrl = `${newResults[i].url.replace(new RegExp('(' + query + ')', 'gi'), '<span class="bg-query">$1</span>')}`;
+		newResults[i].description = newResults[i].description.replace(new RegExp('(' + query.replaceAll(/[.*+?^${}()|[\]\\]/g, '\\\\$&') + ')', 'gi'), '<span class="bg-query">$1</span>');
+		newUrl = `${newResults[i].url.replace(new RegExp('(' + query.replaceAll(/[.*+?^${}()|[\]\\]/g, '\\\\$&') + ')', 'gi'), '<span class="bg-query">$1</span>')}`;
 		if(newResults[i].url != "") {
 			newUrl = "/" + newUrl;
 		}
-		newResults[i].name = newResults[i].name.replace(new RegExp('(' + query + ')', 'gi'), '<span class="bg-query">$1</span>');
+		newResults[i].name = newResults[i].name.replace(new RegExp('(' + query.replaceAll(/[.*+?^${}()|[\]\\]/g, '\\\\$&') + ')', 'gi'), '<span class="bg-query">$1</span>');
 		elem.innerHTML = `<h3 id="${newResults[i].id}">${newResults[i].name}</h3>
 		<a href="https://docs.poisonfox.cf/gsharp/${newResults[i].url}">https://docs.poisonfox.cf/gsharp${newUrl}</a>
 		<p>${newResults[i].description}</p>`;
