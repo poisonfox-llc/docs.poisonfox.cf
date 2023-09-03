@@ -21,7 +21,7 @@ const results = [
 
 const tableDiv = document.querySelector(".results-table")
 const query = new URLSearchParams(location.search).get("q");
-const escapedQuery = query.replaceAll(/[.*+?^${}()|[\]\\]/g, '\\\\$&');
+const escapedQuery = query.replaceAll(/[.*+?^${}()|[\]\\]/g, '\\$&');
 const qSpan = document.querySelectorAll(".query");
 const qInput = document.querySelector("header ul li form input");
 const qResInfos = document.querySelector(".results-infos");
